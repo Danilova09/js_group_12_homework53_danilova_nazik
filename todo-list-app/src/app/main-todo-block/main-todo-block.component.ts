@@ -10,7 +10,7 @@ export class MainTodoBlockComponent  {
 
   tasksTodo = [
     {task: 'read book'},
-    {task: 'read book'},
+    {task: 'text friend'},
   ]
 
   tasksDone = [
@@ -34,6 +34,10 @@ export class MainTodoBlockComponent  {
 
   formIsEmpty() {
     return this.task === '';
+  }
+
+  onDeleteTaskDone(index: number) {
+    this.tasksTodo.splice(index, 1);
   }
 
 }
