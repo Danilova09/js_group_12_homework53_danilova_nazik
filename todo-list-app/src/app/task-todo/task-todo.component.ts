@@ -8,9 +8,14 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 export class TaskTodoComponent  {
   @Input() task = '';
   @Output() delete = new EventEmitter();
+  @Output() taskDone = new EventEmitter();
 
   onClickDelete() {
     this.delete.emit();
+  }
+
+  onClickDone() {
+    this.taskDone.emit();
   }
 
 }

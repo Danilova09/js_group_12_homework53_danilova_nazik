@@ -1,8 +1,8 @@
-<div class="input-group my-4 task-todo-input">
+<div class="input-group my-4 task-todo-input task-todo-item">
   <input type="text" class="form-control py-4" value="{{task}}" style="color: #505050;">
   <div class="input-group-append">
     <button class="input-group-text btn btn-success btn-done"
-            id="basic-addon2"><i class="fas fa-check"></i></button>
+            id="basic-addon1" (click)="onClickDone()"><i class="fas fa-check"></i></button>
     <button class="input-group-text btn btn-danger btn-delete"
             id="basic-addon2" (click)="onClickDelete()"><i class="far fa-trash-alt"></i></button>
   </div>

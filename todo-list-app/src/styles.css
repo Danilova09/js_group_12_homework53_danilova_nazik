@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+.btn-done, .btn-delete {
+  transition: transform 250ms;
+}
+.btn-done:hover {
+  transform: translateX(-10px);
+}
+.btn-delete:hover {
+  transform: translateX(10px);
+}
+

@@ -11,6 +11,8 @@
       *ngFor="let taskItem of tasksTodo; let i = index"
       [task]="taskItem.task"
       (delete)="onDeleteTaskTodo(i)"
+      (input)="onInputChangeValue(i, $event)"
+      (taskDone)="addTaskDoneFromTodo(i)"
     ></app-task-todo>
   </div>
   <div class="done-block">

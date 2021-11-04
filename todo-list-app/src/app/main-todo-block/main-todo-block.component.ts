@@ -1,20 +1,22 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-main-todo-block',
   templateUrl: './main-todo-block.component.html',
   styleUrls: ['./main-todo-block.component.css']
 })
-export class MainTodoBlockComponent  {
+export class MainTodoBlockComponent {
   @Input() task = '';
 
   tasksTodo = [
     {task: 'read book'},
     {task: 'text friend'},
+    {task: 'watch movie'},
   ]
 
   tasksDone = [
     {task: 'do exercises'},
+    {task: 'write a poem'},
   ]
 
   onSubmit(event: Event) {
@@ -27,11 +29,6 @@ export class MainTodoBlockComponent  {
     this.task = '';
   }
 
-  onInputValue(event: Event) {
-    const target = <HTMLInputElement>event.target;
-    this.task = target.value;
-  } /* замена ngModel */
-
   formIsEmpty() {
     return this.task === '';
   }
@@ -43,5 +40,16 @@ export class MainTodoBlockComponent  {
   onDeleteTaskDone(index: number) {
     this.tasksDone.splice(index, 1);
   }
+
+  addTaskDoneFromTodo(index: number) {
+    let taskDone = this.tasksTodo.splice(index, 1);
+    this.tasksDone.push(taskDone[0]);
+  }
+
+  onInputChangeValue(index: number, newTask: Event) {
+    const target = <HTMLInputElement>newTask.target;
+    this.tasksTodo[index].task = target.value;
+  }
+
 
 }
