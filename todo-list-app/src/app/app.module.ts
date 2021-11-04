@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { MainTodoBlockComponent } from './main-todo-block/main-todo-block.component';
 import {FormsModule} from "@angular/forms";
 import { TaskTodoComponent } from './task-todo/task-todo.component';
+import { TaskDoneComponent } from './task-done/task-done.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainTodoBlockComponent,
-    TaskTodoComponent
+    TaskTodoComponent,
+    TaskDoneComponent
   ],
   imports: [
     BrowserModule,

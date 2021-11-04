@@ -36,8 +36,12 @@ export class MainTodoBlockComponent  {
     return this.task === '';
   }
 
-  onDeleteTaskDone(index: number) {
+  onDeleteTaskTodo(index: number) {
     this.tasksTodo.splice(index, 1);
+  }
+
+  onDeleteTaskDone(index: number) {
+    this.tasksDone.splice(index, 1);
   }
 
 }

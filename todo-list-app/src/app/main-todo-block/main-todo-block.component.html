@@ -10,10 +10,14 @@
     <app-task-todo
       *ngFor="let taskItem of tasksTodo; let i = index"
       [task]="taskItem.task"
-      (delete)="onDeleteTaskDone(i)"
+      (delete)="onDeleteTaskTodo(i)"
     ></app-task-todo>
   </div>
   <div class="done-block">
     <h3 class="text-center">Done</h3>
+    <app-task-done
+    *ngFor="let taskItem of tasksDone; let i = index"
+    [task]="taskItem.task"
+    (delete)="onDeleteTaskDone(i)"></app-task-done>
   </div>
 </div>
