@@ -1,8 +1,8 @@
 <div class="main-todo-list-block">
-  <form>
+  <form (submit)="onSubmit($event)">
     <div class="input-group input-group-lg my-5">
-      <input type="text" class="form-control" name="task">
-      <button class="btn btn-primary ml-4">add</button>
+      <input type="text" class="form-control" name="task" [(ngModel)]="task">
+      <button class="btn btn-primary ml-4" [disabled]="formIsEmpty()">add</button>
     </div>
   </form>
   <div class="todo-block">
