@@ -1,0 +1,14 @@
+body {
+  box-sizing: border-box;
+}
+.main-todo-list-block {
+  width: 700px;
+  margin: 100px auto;
+}
+.todo-block, .done-block {
+  width: 100%;
+  background: #ececec;
+  margin-top: 20px;
+  padding: 30px 20px;
+  border-radius: 5px;
+}
